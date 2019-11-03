@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import './App.css';
+import './test.scss';
 
 function App() {
   const [date, setDate] = useState(null);
