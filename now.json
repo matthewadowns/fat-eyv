@@ -49,9 +49,6 @@
     }
   ],
   "env": {
-    "GITHUB_CLIENT_ID": "@fat-github-client-id",
-    "GITHUB_CLIENT_SECRET": "@fat-github-client-secret",
-    "MONGODB_ATLAS_URI": "@fat-mongodb-atlas-uri",
     "MONGODB_URI": "@mongodb-uri"
   }
 }
