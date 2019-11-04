@@ -1,10 +1,12 @@
 import fetch from 'isomorphic-unfetch';
 
-function Projects({ projects }) {
+function Projects(props) {
   return (
     <div>
       <h1>Projects page</h1>
-      <div>{projects}</div>
+      {console.log(props)}
+      {console.log(props.projects)}
+      <div>{props.projects}</div>
     </div>
   );
 }
