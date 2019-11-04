@@ -6,7 +6,7 @@ function App() {
   const [date, setDate] = useState(null);
   useEffect(() => {
     async function getDate() {
-      const res = await fetch('/api/date');
+      const res = await fetch('/api/get-date');
       const newDate = await res.text();
       setDate(newDate);
     }
@@ -48,7 +48,7 @@ function App() {
         .
       </p>
       <br />
-      <h2>The date according to Go is:</h2>
+      <h2>The date according to Node is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
     </main>
   );
