@@ -8,8 +8,10 @@ app.get('*', async (req, res) => {
       Create a new mongoose connection to MongoDB Atlas with connection string,
       which we will close before sending a response back to client.
     */
+    console.log('process.env.MONGODB_ATLAS_URI');
+    console.log(process.env.MONGODB_ATLAS_URI);
     const connection = await mongoose.createConnection(
-      process.env.MONGODB_URI,
+      process.env.MONGODB_ATLAS_URI,
       {
         /*
           Buffering allows Mongoose to queue up operations if MongoDB
@@ -17,7 +19,9 @@ app.get('*', async (req, res) => {
           With serverless, it is better to fail fast when not connected.
         */
         bufferCommands: false,
-        bufferMaxEntries: 0
+        bufferMaxEntries: 0,
+        useNewUrlParser: true,
+        useUnifiedTopology: true
       }
     );
 
