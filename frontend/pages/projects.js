@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-unfetch';
+
 function Projects({ projects }) {
   return (
     <div>
